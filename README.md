@@ -1,16 +1,56 @@
-# React + Vite
+# Vocab Quiz — personal vocabulary that sticks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live app: https://vocab-quiz.vercel.app**
 
-Currently, two official plugins are available:
+## The idea
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Learn the words you actually need — not a textbook's list.
 
-## React Compiler
+Vocab Quiz takes your own word list (imported from a CSV), quizzes you on
+a spaced schedule, and tracks every word as it climbs from new to mastered.
+Five minutes a day, and the dashboard shows the pile of "mastered" words
+growing week over week.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What the current version does
 
-## Expanding the ESLint configuration
+- **CSV import** — bring your own word lists; no pre-built packs
+- **Two study modes** — flashcards and multiple-choice quizzes, with a
+  configurable number of words per session
+- **SM-2 spaced repetition** — review intervals adapt per word, with
+  ease-factor adjustment based on how well you recalled it
+- **Mastery levels** — every word moves new → learning → familiar →
+  mastered, tracked per word
+- **Dashboard** — your vocabulary's progress at a glance
+- **Google sign-in** — your lists and progress follow you
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech stack
+
+- **Framework:** React + Vite
+- **Auth & database:** Firebase Authentication (Google) and Cloud Firestore
+- **PWA:** vite-plugin-pwa (installable, offline shell)
+
+## Run it locally
+
+```bash
+npm install
+npm run dev   # Vite dev server
+```
+
+Firebase config lives in the app's Firebase client setup — point it at your
+own Firebase project (Authentication + Firestore) to run your own instance.
+
+## Deployment
+
+Hosted on Vercel from this repo's `main` branch.
+
+## Status
+
+Standalone for now. A merge into its sibling app
+[Fluencia](https://github.com/nachiketmparanjape/fluencia) (which has its
+own vocab system) is under consideration — until that's decided, this repo
+gets maintenance, not new features.
+
+---
+
+Part of a one-person studio building focus tools for scattered brains —
+small apps, each built around one daily loop.
