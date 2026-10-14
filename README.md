@@ -1,6 +1,6 @@
 # Vocab Quiz — personal vocabulary that sticks
 
-**Live app: https://vocab-quiz.vercel.app**
+**Live app: https://vocabquiz-lake.vercel.app**
 
 ## The idea
 
