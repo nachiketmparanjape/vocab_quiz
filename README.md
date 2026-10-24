@@ -1,5 +1,7 @@
 # Vocab Quiz — personal vocabulary that sticks
 
+> **Purpose:** ORIENT — a stranger understands what Vocab Quiz is, and that it is live, in 60 seconds.
+
 **Live app: https://vocabquiz-lake.vercel.app**
 
 ## The idea
